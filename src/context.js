@@ -12,7 +12,7 @@ class ProductProvider extends Component {
         products : [],
         detailProduct : detailProduct,
         cart : [],
-        modalOpen : true,
+        modalOpen : false,
         modalProduct: detailProduct,
         cartSubTotal : 0,
         cartTax : 0,
@@ -76,6 +76,7 @@ class ProductProvider extends Component {
         return {modalOpen: false}
       })
     }
+
     increment = (id) => {
       let tempCart = [...this.state.cart];
       const selectedProduct = tempCart.find(item => item.id ===id)
